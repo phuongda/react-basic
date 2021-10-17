@@ -3,18 +3,19 @@ import React from 'react';
 class MyComponent extends React.Component {
 
     state = {
-        name: 'Won Su',
-        age: 27
+        name: '',
+        age: ''
     }
 
     handleOnChangeName = (event) => {
+        // console.log(event.target.value, 'event.target:', event.target, 'event object:', event);
         this.setState({
-            name: event.target.value
+            name: event.target.value,
+            age: 27
         })
     }
 
     handleClickButton = () => {
-        console.log('Click button');
         alert('Click me!');
     }
 
