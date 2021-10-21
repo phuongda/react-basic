@@ -1,4 +1,5 @@
 import React from 'react';
+import ChildComponent from './childComponent';
 
 class MyComponent extends React.Component {
 
@@ -26,6 +27,7 @@ class MyComponent extends React.Component {
 
     render() {
         console.log('Render:', this.state);
+
         return (
             <>
                 <form>
@@ -35,6 +37,10 @@ class MyComponent extends React.Component {
                     <input type="text" value={this.state.lastName} onChange={(event) => this.handleChangeLastName(event)} /><br /><br />
                     <input type="submit" defaultValue="Submit" onClick={(event) => this.handleSubmit(event)} />
                 </form>
+
+                <ChildComponent name={'one'} />
+                <ChildComponent name={'two'} />
+                <ChildComponent name={'tree'} />
             </>
         )
     }
