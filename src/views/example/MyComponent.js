@@ -3,31 +3,38 @@ import React from 'react';
 class MyComponent extends React.Component {
 
     state = {
-        name: '',
-        age: ''
+        firstName: '',
+        lastName: '',
     }
 
-    handleOnChangeName = (event) => {
-        // console.log(event.target.value, 'event.target:', event.target, 'event object:', event);
+    handleChangeFirstName = (event) => {
         this.setState({
-            name: event.target.value,
-            age: 27
+            firstName: event.target.value
         })
     }
 
-    handleClickButton = () => {
-        alert('Click me!');
+    handleChangeLastName = (event) => {
+        this.setState({
+            lastName: event.target.value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('Check data input:', this.state);
     }
 
     render() {
+        console.log('Render:', this.state);
         return (
             <>
-                <input type="test" value={this.state.name} onChange={(event) => this.handleOnChangeName(event)}></input>
-                <div className="box-children-1">Hello! My name is {this.state.name}, i'm {this.state['age']}</div>
-                <div className="box-children-2">this is My Component</div>
-                <div className="box-btn">
-                    <button onClick={() => this.handleClickButton()}>Click me!</button>
-                </div>
+                <form>
+                    <label htmlFor="fname">First name:</label><br />
+                    <input type="text" value={this.state.firstName} onChange={(event) => this.handleChangeFirstName(event)} /><br />
+                    <label htmlFor="lname">Last name:</label><br />
+                    <input type="text" value={this.state.lastName} onChange={(event) => this.handleChangeLastName(event)} /><br /><br />
+                    <input type="submit" defaultValue="Submit" onClick={(event) => this.handleSubmit(event)} />
+                </form>
             </>
         )
     }
