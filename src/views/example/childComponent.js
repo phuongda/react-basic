@@ -29,10 +29,20 @@ class ChildComponent extends React.Component {
         // let name = this.props.name;
         // let age = this.props.age;
 
-        let { name, age } = this.props;
+        let { name, age, address, jobs } = this.props;
+        let data = '';
         return (
             <>
-                <div>My name is {name}, i'm {age}</div>
+                <div className="job-lists">
+                    {
+                        data = jobs.map((item, index) => {
+                            return (
+                                <div key={item.id}>{item.title} - {item.salary}</div>
+                            )
+                        })
+                    }
+                    {console.log('Check map array:', data)}
+                </div>
             </>
         )
     }
