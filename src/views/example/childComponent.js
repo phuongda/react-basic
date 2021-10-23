@@ -15,8 +15,7 @@ class ChildComponent extends React.Component {
 
         let { jobs } = this.props;
         let { showJob } = this.state;
-        let check = showJob ? 'showJob === true' : 'showJob === false';
-        console.log(check);
+
         return (
             <>
                 {!showJob ?
@@ -40,26 +39,26 @@ class ChildComponent extends React.Component {
     }
 }
 
-// const ChildComponent = (props) => {
-//     console.log('Check props:', props)
-
-//     let { jobs } = props;
-
-//     return (
-//         <>
-//             <div className="job-lists">
-//                 {
-//                     jobs.map((item, index) => {
-//                         if (item.salary >= 500) {
-//                             return (
-//                                 <div key={item.id}>{item.title} - {item.salary}$</div>
-//                             )
-//                         }
-//                     })
-//                 }
-//             </div>
-//         </>
-//     )
-// }
+/*const ChildComponent = (props) => {
+    console.log('Check props:', props)
+ 
+    let { jobs } = props;
+ 
+    return (
+        <>
+            <div className="job-lists">
+                {
+                    jobs.map((item, index) => {
+                        if (item.salary >= 500) {
+                            return (
+                                <div key={item.id}>{item.title} - {item.salary}$</div>
+                            )
+                        }
+                    })
+                }
+            </div>
+        </>
+    )
+} */
 
 export default ChildComponent;
