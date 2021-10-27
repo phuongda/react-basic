@@ -2,13 +2,17 @@ import React from 'react';
 
 class ChildComponent extends React.Component {
     state = {
-        'showJob': false
+        'showJob': true
     }
 
     handleShowHide = () => {
         this.setState({
             showJob: !this.state.showJob
         })
+    }
+
+    handleOnClickDelete = (job) => {
+        this.props.deleteJob(job);
     }
 
     render() {
@@ -26,7 +30,7 @@ class ChildComponent extends React.Component {
                             {
                                 jobs.map((item, index) => {
                                     return (
-                                        <div key={item.id}>{item.title} - {item.salary}</div>
+                                        <div key={item.id}>{item.title} - {item.salary}&nbsp;<span onClick={() => this.handleOnClickDelete(item)}>x</span></div>
                                     )
                                 })
                             }
