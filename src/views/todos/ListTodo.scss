@@ -1,0 +1,39 @@
+.list-todo-container {
+    button {
+        cursor: pointer;
+    }
+
+    .add-todo {
+        .btn-add {
+            margin-left: 10px;
+        }
+    }
+
+    .list-todo-content {
+        width     : 400px;
+        margin    : 20px auto 0 auto;
+        padding   : 0 10px 0 10px;
+        border    : 1px solid #ffffff;
+        text-align: left;
+
+        .todo-child {
+            display        : flex;
+            flex-direction : row;
+            align-items    : center;
+            justify-content: space-between;
+            padding        : 10px;
+
+            >*:first-child {
+                flex: 1;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #ffffff;
+            }
+
+            >*:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+}
