@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.scss';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from './navigation/Nav';
 import Home from './example/Home';
 import ListTodo from './todos/ListTodo.js';
