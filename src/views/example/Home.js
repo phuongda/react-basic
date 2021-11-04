@@ -1,11 +1,12 @@
 import React from 'react';
-import { withRouter } from "react-router";
+// import { withRouter } from "react-router";
+import Color from '../hoc/Color';
 
 class Home extends React.Component {
     componentDidMount() {
-        setTimeout(() => {
-            this.props.history.push('/todo')
-        }, 3000)
+        //     setTimeout(() => {
+        //         this.props.history.push('/todo')
+        //     }, 3000)
     }
 
     render() {
@@ -18,4 +19,5 @@ class Home extends React.Component {
     }
 }
 
-export default withRouter(Home);
+// export default withRouter(Home);
+export default Color(Home);
