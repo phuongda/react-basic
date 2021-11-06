@@ -1,6 +1,7 @@
 import React from 'react';
 // import { withRouter } from "react-router";
 import Color from '../hoc/Color';
+import myPic from '../../assets/images/my-pic.png';
 
 class Home extends React.Component {
     componentDidMount() {
@@ -12,9 +13,12 @@ class Home extends React.Component {
     render() {
         console.log('Check props:', this.props);
         return (
-            <div>
-                Hello this is Home Page
-            </div>
+            <>
+                <div><img src={myPic} alt="my pic" width="300" style={{ marginTop: '15px' }} /></div>
+                <div>
+                    Hello this is Home Page
+                </div>
+            </>
         )
     }
 }
