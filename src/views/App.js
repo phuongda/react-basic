@@ -5,8 +5,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from './navigation/Nav';
 import Home from './example/Home';
-import ListTodo from './todos/ListTodo.js';
-import MyComponent from './example/MyComponent.js';
+import ListTodo from './todos/ListTodo';
+import MyComponent from './example/MyComponent';
+import ListUser from './user/ListUser';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/about">
               <MyComponent />
+            </Route>
+            <Route path="/user">
+              <ListUser />
             </Route>
           </Switch>
         </header>

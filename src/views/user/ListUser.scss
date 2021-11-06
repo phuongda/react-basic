@@ -1,0 +1,20 @@
+.list-user-container {
+    .list-user-content {
+        width         : 500px;
+        display       : flex;
+        flex-direction: column;
+        margin        : 15px auto;
+        border        : 1px solid #ffffff;
+
+        >.child {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            padding        : 5px 10px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #ffffff;
+            }
+        }
+    }
+}
