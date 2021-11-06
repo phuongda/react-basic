@@ -8,6 +8,7 @@ import Home from './example/Home';
 import ListTodo from './todos/ListTodo';
 import MyComponent from './example/MyComponent';
 import ListUser from './user/ListUser';
+import DetailUser from './user/DetailUser';
 
 function App() {
   return (
@@ -26,8 +27,11 @@ function App() {
             <Route path="/about">
               <MyComponent />
             </Route>
-            <Route path="/user">
+            <Route path="/user" exact>
               <ListUser />
+            </Route>
+            <Route path="/user/:id">
+              <DetailUser />
             </Route>
           </Switch>
         </header>
